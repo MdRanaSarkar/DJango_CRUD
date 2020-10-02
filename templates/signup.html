@@ -1,0 +1,10 @@
+{%extends 'main.html'%} 
+{%block mainbody%}
+<div class="container">
+<form  method="POST" accept-charset="utf-8">
+{% csrf_token %}
+{{form.as_p}}
+<input type="Submit" name="submit" value="Signup">
+</form>
+</div>
+{%endblock%}

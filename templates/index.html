@@ -1,0 +1,9 @@
+{%extends 'main.html'%} 
+{% load embed_video_tags %} 
+{%block mainbody%} 
+
+{% for p in item %} {% video p.video 'small' %}
+
+ {% endfor %} 
+ 
+ {%endblock%}

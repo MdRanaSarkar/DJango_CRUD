@@ -1,0 +1,35 @@
+{%extends 'main.html'%} {%block mainbody%}
+{% load crispy_forms_tags %}
+
+<form method="POST" , enctype="multipart/form-data">
+	{%csrf_token%}
+	<div class="container">
+   
+
+        {{ form.name|as_crispy_field }}
+
+
+    <div class="form-row">
+	<div class="form-group col-md-6 mb-0">
+        {{ form.father_name|as_crispy_field }}
+   </div>
+ 
+      <div class="form-group col-md-6 mb-0">
+        {{ form.mother_name|as_crispy_field }}
+      </div>
+    </div>
+	   <div class="form-row">
+      <div class="form-group col-md-6 mb-0">
+        {{ form.number|as_crispy_field }}
+      </div>
+       <div class="form-group col-md-6 mb-0">
+        {{ form.email|as_crispy_field }}
+      </div>
+    </div>
+	  {{ form.student_image|as_crispy_field }}
+ 
+    <button type="submit" class="btn btn-primary">Sign in</button>
+	</div>
+</form>
+      rajshahi@islamibankbd.com
+{%endblock%}
